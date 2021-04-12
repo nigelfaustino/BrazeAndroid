@@ -2,4 +2,7 @@
 <resources>
     <string name="com_appboy_api_key">a09a22e3-5a36-48ef-8848-e4784378ea57</string>
     <string translatable="false" name="com_appboy_custom_endpoint">sondheim.braze.com</string>
+    <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
+    <string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">319318179244</string>
+
 </resources>
