@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_appboy_api_key">a09a22e3-5a36-48ef-8848-e4784378ea57</string>
+    <string translatable="false" name="com_appboy_custom_endpoint">sondheim.braze.com</string>
+</resources>

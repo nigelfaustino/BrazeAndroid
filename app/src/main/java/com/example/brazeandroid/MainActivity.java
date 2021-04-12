@@ -9,6 +9,14 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import android.util.Log;
+
+import com.appboy.Appboy;
+import com.appboy.support.StringUtils;
+import com.appboy.AppboyLifecycleCallbackListener;
+import com.appboy.configuration.AppboyConfig;
+import com.appboy.support.AppboyLogger;
+
 
 public class MainActivity extends AppCompatActivity {
 

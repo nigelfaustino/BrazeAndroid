@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319318179244",
+    "project_id": "brazeandroidintegration",
+    "storage_bucket": "brazeandroidintegration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319318179244:android:fe89847494a748fd8a8e09",
+        "android_client_info": {
+          "package_name": "com.example.brazeandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319318179244-qqj9p36q0foj0t4853dp5fiotvdc9frv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2cTSyJd1lVw_QeYeHgQpmW5P8RAUC-xI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319318179244-qqj9p36q0foj0t4853dp5fiotvdc9frv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
