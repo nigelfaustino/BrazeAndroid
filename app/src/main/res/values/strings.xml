@@ -2,7 +2,8 @@
     <string name="app_name">BrazeAndroid</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Content Cards</string>
     <string name="changeUserButton">Change User</string>
     <string name="user_id">user_id</string>
+    <string name="content_cards">content cards</string>
 </resources>

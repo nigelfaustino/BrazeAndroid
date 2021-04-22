@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.widget.Button;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.appboy.support.StringUtils;
 
+import com.appboy.ui.AppboyContentCardsFragment;
 import com.example.brazeandroid.R;
 
 import com.appboy.Appboy;
@@ -25,6 +28,7 @@ public class HomeFragment extends Fragment {
     private EditText mUserIdEditText;
     private Button logCustomEventButton;
     private EditText customEventText;
+    private Button contentCardButton;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

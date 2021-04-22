@@ -9,9 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.appboy.ui.AppboyContentCardsFragment;
 import com.example.brazeandroid.R;
 
 public class NotificationsFragment extends Fragment {
@@ -30,6 +33,12 @@ public class NotificationsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        AppboyContentCardsFragment contentCardsFragment = new AppboyContentCardsFragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.notificationsFragment,contentCardsFragment,"tag");
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
         return root;
     }
 }
