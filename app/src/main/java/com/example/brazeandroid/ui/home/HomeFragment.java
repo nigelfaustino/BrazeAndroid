@@ -1,22 +1,22 @@
 package com.example.brazeandroid.ui.home;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.appboy.configuration.AppboyConfig;
 import com.appboy.support.StringUtils;
 
-import com.appboy.ui.AppboyContentCardsFragment;
 import com.example.brazeandroid.R;
 
 import com.appboy.Appboy;
@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment {
     private Button logCustomEventButton;
     private EditText customEventText;
     private Button contentCardButton;
+    private Button changeConfigButton;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class HomeFragment extends Fragment {
         logCustomEventButton = root.findViewById(R.id.eventButton);
         mUserIdEditText = root.findViewById(R.id.editText);
         customEventText = root.findViewById(R.id.attributeText);
+        changeConfigButton = root.findViewById(R.id.configureButton);
         return root;
     }
 
@@ -62,6 +64,25 @@ public class HomeFragment extends Fragment {
             } else {
                 Toast.makeText(getContext(), "Please enter a custom event.", Toast.LENGTH_SHORT).show();
             }
+        });
+        changeConfigButton.setOnClickListener(view -> {
+            Boolean isAppboyDisabled = Appboy.isSdkDisabled();
+            if (!isAppboyDisabled) {
+                Appboy.disableSdk(getContext());
+            }
+            String apiKey = customEventText.getText().toString();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AppboyConfig appboyConfig = new AppboyConfig.Builder()
+                            .setApiKey(apiKey)
+                            .setCustomEndpoint("sondheim.braze.com")
+                            .build();
+                    Appboy.configure(getContext(), appboyConfig);
+                    Appboy.enableSdk(getContext());
+                }
+            }, 3000);
         });
     }
 }

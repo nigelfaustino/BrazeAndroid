@@ -6,4 +6,7 @@
     <string name="changeUserButton">Change User</string>
     <string name="user_id">user_id</string>
     <string name="content_cards">content cards</string>
+    <string name="log_event">Log Event</string>
+    <string name="configure">CONFIGURE</string>
+    <string name="event_api_key">event/api key</string>
 </resources>
